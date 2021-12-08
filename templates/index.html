@@ -1,0 +1,23 @@
+
+
+
+{% block head %}
+
+<title>AUTO EDA TOOL</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">AUTO EDA TOOL, UPLOAD YOUR CSV FILE AND SEE MAGIC</h1>
+
+    <div class="form">
+        <form action='/eda' method="POST",enctype="multipart/form-data">
+            <label >Choose a CSV FILE </label>
+            <input type="file" id="file" name="file" >
+            <input type="submit" value="Upload Image" name="submit">
+
+          </form>
+    </div>
+</div>
+{% endblock %}
